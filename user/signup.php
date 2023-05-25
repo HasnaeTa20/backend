@@ -11,8 +11,9 @@ include '../connection.php';
  $password = md5($_POST['password']);//abc56 ==with md5 ==> bhfhj565Jkigk
 //  $password = $_POST['password'];
  $role = 'UtilisateurInterne'; 
+ $status='Non Active';
   
- $sqlQuer = " INSERT INTO utilisateur SET nom = '$nom', prenom = '$prenom' , username = '$username', email = '$email', password = '$password' , role='$role'";
+ $sqlQuer = " INSERT INTO utilisateur SET nom = '$nom', prenom = '$prenom' , username = '$username', email = '$email', password = '$password' , role='$role',status='$status'";
 
     $result = $con->query($sqlQuer);
     if($result){
